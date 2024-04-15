@@ -21,7 +21,7 @@ with tab1:
     Section 02: Variables and Data Types             
     ''')
 with tab2:
-    st.header("Course")
+    st.header("Module 1: Python Syntax")
     st.markdown('''
     ## Section 01: Basic Syntax and Comments
     In this lesson, "Basic Syntax and Comments," you'll take your first steps into writing clean and readable code. Python is known for its straightforward syntax, often compared to the English language, which makes it an excellent language for beginners.
@@ -138,11 +138,12 @@ with tab2:
     rate = st.slider('Please Rate this module', 0, 3, 5)
 
 with tab3:
-    st.header("Assignment")
+    st.header("Module 1: Python Syntax")
     st.markdown('''         
-    ## Objective: 
+    ## Assignment Objective: 
     Create a Python script that demonstrates the use of basic syntax, comments, variables, and data types. Your script will act as a journal entry for your first week of learning Python, summarizing what you have learned and storing various pieces of information as Python variables.
-    Assignment Details:
+    
+    ## Assignment Details:
                 
     1. Create a Header Comment:
     At the beginning of your script, include a header comment with the title of the assignment, your name, and the date.
@@ -156,7 +157,11 @@ with tab3:
     4. Print Variables:
     Use the print function to output each variable on a separate line.
     Include a string literal before printing each variable to describe what is being printed.''')
-    file = st.file_uploader('',['py'])
+    
+    st.subheader('Upload Your Work')
+    file = st.file_uploader('please upload your work here',['py'])
 
-    st.markdown("## Grade & Feedback")
-   
+    st.subheader("Grade & Feedback")
+    
+    if file:
+        st.markdown("**Your Grade is:** 80/100")

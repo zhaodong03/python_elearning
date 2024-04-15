@@ -3,8 +3,8 @@ import streamlit as st
 tab1, tab2 = st.tabs(["Mac", "Windows"])
 
 with tab1:
-   st.header("Mac Python Installation")
-   st.markdown('''
+    st.header("Mac Python Installation")
+    st.markdown('''
 ## Pre-Installed Check
 Mac laptops usually come with Python pre-installed, to check if your MacBook has Python pre-installed:
 Open terminal (you can search for terminal by clicking and command and space at the same time)
@@ -38,8 +38,8 @@ You will see the Hello World be printed in the Output'''
 )
 
 with tab2:
-   st.header("Windows Python Installation")
-   st.markdown('''
+    st.header("Windows Python Installation")
+    st.markdown('''
 ## Install Python
 You can download Python from the official website: https://www.python.org/downloads/, You can choose any version of this course, but you need to make sure the operating system is Windows. Once downloaded, open the installer and follow the on-screen instructions to install Python. Make sure you select the Install launcher for all users checkbox and the Add python.exe to PATH checkbox. After the installation is complete, you can verify that Python is installed correctly by opening the Terminal and typing python --version, which could display the version of Python installed on your system
 
