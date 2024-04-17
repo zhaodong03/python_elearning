@@ -29,13 +29,15 @@ Download the first Python extension
 ## The first line of code
 Create a file named 'HelloWorld' on your desktop
 Drag this file to the Visual Studio Code
-You will see the HelloWorld on the top left, move your mouse to the HelloWorld, you will see 4 icons, click the leftmost one to create a new file, named “helloworld.py”
-
+You will see the HelloWorld on the top left, move your mouse to the HelloWorld, you will see 4 icons, click the leftmost one to create a new file, named “helloworld.py”''')
+    st.image('assets/installation/01.png')
+    st.markdown('''
 Type print("Hello World") in the helloworld.py, save the file by press command+S
 Click the small triangle run button on the top right of the screen to run the code
 
 You will see the Hello World be printed in the Output'''
 )
+    st.image('assets/installation/02.png')
 
 with tab2:
     st.header("Windows Python Installation")
@@ -56,18 +58,17 @@ Download the first Python extension
 ## The first line of code
 Create a file named ‘HelloWorld’ on your desktop
 Drag this file to the Visual Studio Code
-You will see the HelloWorld on the top left, move your mouse to the HelloWorld, you will see 4 icons, click the leftmost one to create a new file, named “helloworld.py”
-
-
-
-Type print("Hello World") in the helloworld.py, and save the file by pressing Ctrl+S
+You will see the HelloWorld on the top left, move your mouse to the HelloWorld, you will see 4 icons, click the leftmost one to create a new file, named “helloworld.py”''')
+    st.image('assets/installation/01.png')
+    st.markdown('''
+Type print("Hello World") in the helloworld.py, save the file by press command+S
 Click the small triangle run button on the top right of the screen to run the code
 
-
-You will see the Hello World printed in the Output
-
+You will see the Hello World be printed in the Output'''
+)
+    st.image('assets/installation/02.png')
+    st.markdown('''
 ## Reference 
 https://www.digitalocean.com/community/tutorials/install-python-windows-10
-
 ''')
 

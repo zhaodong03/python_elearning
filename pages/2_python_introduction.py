@@ -44,27 +44,32 @@ with tab2:
     - Python programs are composed of lines of code and follow a specific syntax.
     - A simple Python script often starts with imports (if any), followed by definitions of functions and classes, and finally the main code body.
     - Example of a basic Python program structure:
-    TODO: IMAGE
-        
+''')
+    st.image('assets/m1/01.jpg')
+
+    st.markdown('''
     ## Understanding Indentation
     - Indentation refers to the spaces at the beginning of a code line.
     - In Python, indentation is crucial as it defines the scope of loops, functions, classes, and conditionals (like if statements).
     - Consistent indentation is key; Python does not allow mixing tabs and spaces.
     - Example of correct and incorrect indentation:
-        - Correct:
-        TODO: IMAGE
+        - Correct:''')
+    st.image('assets/m1/02.jpg')
+    st.markdown('''
         - Incorrect:
-    TODO: IMAGE
-            
+    ''')
+    st.image('assets/m1/03.jpg')       
     ## Writing Comment
+    st.markdown('''
     - Comments are lines that are not executed and are used to explain the code.
     - Single-line comments: Start with a hash character (#) and extend to the end of the line.
-        - Example:
-    TODO: IMAGE
+        - Example:''')
+    st.image('assets/m1/04.jpg')
+    st.markdown('''
     - Multi-line comments: While Python does not have a direct way to create multi-line comments, you can use a multi-line string (triple quotes) that is not assigned to a variable.
-        - Example:
-    TODO: IMAGE
-
+        - Example:''')
+    st.image('assets/m1/05.jpg')
+    st.markdown('''
     ## Quiz
     ### Quiz 01: Section 01 -- Getting Started with Python Programming
     ''')
@@ -102,7 +107,10 @@ with tab2:
 
     To create a variable, you simply assign it a value using the equals sign (=).
 
-    Example:
+    Example:''')
+        st.image('assets/m1/06.jpg')
+        st.markdown('''
+    
                     
     Python has a set of built-in data types that define the type of value a variable can hold. Here are the most common ones:
                     
@@ -133,8 +141,8 @@ with tab2:
     - Python is dynamically typed, which means you don't have to explicitly declare the data type of a variable. The type can change as the assignment to the variable changes.
     - This feature allows for greater flexibility, but it also means that you need to be aware of the type of value your variables are holding.
     - Example of dynamic typing:
-         
 ''')
+        st.image('assets/m1/07.jpg')
     rate = st.slider('Please Rate this module', 0, 3, 5)
 
 with tab3:
