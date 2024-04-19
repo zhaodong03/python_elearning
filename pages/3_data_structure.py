@@ -26,19 +26,20 @@ with tab2:
     - List Operations
     - Practice
     ## Creating a List
-    - Below is an example of creating a list with square brackets and filling it with items of any data type. 1, 2, 3 are integers, whereas 'Python' is a string.
+    - Below is an example of creating a list with square brackets and filling it with items of any data type. 1, 2, 3 are integers, whereas 'Python' is a string.''')
     
-    TODO: IMAGE
-                
+    st.image('assets/m2/01.jpg')
+    st.markdown('''            
     ## Accessing and Modifying Items
     - You can use indices to access list items and modify them. Here is an example:
-
-    TODO: IMAGE
+    ''')
+    st.image('assets/m2/02.jpg')
+    st.markdown('''
     
     ## List Operations
     - Python has methods of appending, extending, and removing items, as well as other list methods that are essential for list manipulation. Here is an example of appending to a list:
-    
     ''')
+    st.image('assets/m2/03.jpg')
     q1 = st.radio(
         "TODO: QUIZ question?",
         ["option 1", "option 2", "option 3", "option 4"],
@@ -57,16 +58,19 @@ with tab2:
     
     ## Creating a Dictionary
     - Below is an example of creating a dictionary where data is stored in key-value pairs. Here, 'name' and 'age' are keys, and 'Alice' and 25 are their corresponding values.
-    
-    TODO: IMAGE
+        ''')
+        st.image('assets/m2/04.jpg')
+        st.markdown('''
     ## Accessing and Modifying Dictionary Items
     - You can access values in a dictionary using their keys and modify them accordingly. Here is an example:
-    TODO: IMAGE
-    
+        ''')
+        st.image('assets/m2/05.jpg')
+        st.markdown('''
     ## Dictionary Methods
     - Python provides a variety of methods to work with dictionaries. Here is how you can add a new key-value pair to a dictionary and retrieve all the keys as a list:
-    TODO: IMAGE
-''')
+            ''')
+        st.image('assets/m2/06.jpg')
+        
     rate = st.slider('Please Rate this module', 0, 3, 5)
 
 with tab3:
