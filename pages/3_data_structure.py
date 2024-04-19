@@ -51,7 +51,7 @@ with tab2:
     ## Section 02: Dictionaries and Key-Value Pairing
     In this section, "Dictionaries and Key-Value Pairing," you'll explore the Python dictionary, a collection of key-value pairs that allows you to store and retrieve data efficiently. Unlike lists, dictionaries are unordered and cannot be indexed by a number. Instead, they use unique keys to access values. This makes dictionaries ideal for representing real-world data in a structured way.
     ## Table of Content
-    -Creating a Dictionary
+    - Creating a Dictionary
     - Accessing and Modifying Dictionary Items
     - Dictionary Methods
     - Practice
