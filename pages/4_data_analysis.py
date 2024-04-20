@@ -50,12 +50,12 @@ You can also display the number of rows and columns in the data by using the sha
 
     
     q1 = st.radio(
-        "TODO: QUIZ question?",
-        ["option 1", "option 2", "option 3", "option 4"],
+        "Which of the followingf function should I use if I wish to see the Overview of the data",
+        ["df.head()", "df.iloc[0]", "df.shape"],
         index=None,
     )
     st.subheader("You must correctly answer the above quizz(es) to unlock the rest masterials")
-    if q1 == 'option 1':
+    if q1 == 'df.head()':
         st.markdown('''
 ## Section 02: Plotting
 

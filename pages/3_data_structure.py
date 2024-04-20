@@ -41,12 +41,12 @@ with tab2:
     ''')
     st.image('assets/m2/03.jpg')
     q1 = st.radio(
-        "TODO: QUIZ question?",
-        ["option 1", "option 2", "option 3", "option 4"],
+        "Which of the following is the correct way to make a LIST in python?",
+        ["my_list = [1, 2, 3]", "my_list = (1, 2, 3)", "my_list = {1, 2, 3}", "my_list = 1, 2, 3"],
         index=None,
     )
     st.subheader("You must correctly answer the above quizz(es) to unlock the rest masterials")
-    if q1 == 'option 1':
+    if q1 == 'my_list = [1, 2, 3]':
         st.markdown('''
     ## Section 02: Dictionaries and Key-Value Pairing
     In this section, "Dictionaries and Key-Value Pairing," you'll explore the Python dictionary, a collection of key-value pairs that allows you to store and retrieve data efficiently. Unlike lists, dictionaries are unordered and cannot be indexed by a number. Instead, they use unique keys to access values. This makes dictionaries ideal for representing real-world data in a structured way.
