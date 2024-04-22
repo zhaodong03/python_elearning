@@ -6,7 +6,7 @@ LOGGER = get_logger(__name__)
 
 def run():
     st.set_page_config(
-        page_title="python e-learning",
+        page_title="Python E-learning",
         page_icon="",
     )
 

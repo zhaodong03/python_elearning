@@ -90,7 +90,7 @@ with tab2:
     )
 
     st.subheader("You must correctly answer the above three quizzes to unlock the rest masterials")
-    if q1 == "// This is a comment" and q2 == "Indentation in Python is critical and is used to define the scope of loops, functions, and classes." and q3 == "Surround the comment with /* and */.":
+    if q1 == "# This is a comment" and q2 == "Indentation in Python is critical and is used to define the scope of loops, functions, and classes." and q3 == 'Enclose the comment in triple double-quotes, like """This is a multi-line comment""".':
         st.markdown('''
     ## Section 02: Variables and Data Types
     In this section, we will dive into how you can declare variables and the simplicity behind Python’s dynamic typing. We’ll explore the core data types that are foundational to programming in Python: integers for whole numbers, floating-point numbers for decimals, strings for text, and booleans for truth values.
