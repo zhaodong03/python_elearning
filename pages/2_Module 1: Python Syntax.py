@@ -172,4 +172,4 @@ with tab3:
     st.subheader("Grade & Feedback")
     
     if file:
-        st.markdown("**Your Grade is:** 80/100")
+        st.markdown("**Your Grade is:** 100/100")

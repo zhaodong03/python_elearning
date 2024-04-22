@@ -22,9 +22,9 @@ Are you ready to unlock the power of data analysis and visualization with Python
 Python is a high-level programming language that become one of the most popular programming languages due to its simplicity, readability, and versatility. Python is used in a wide range of fielding including web development, data analysis, AI, machine learning, and etc. This course chose Python as the programming language because it is beginner-friendly, versatile, has a strong community and resources, and is FREE. 
 
 ## What You'll Learn?
-1. Python Basics: Get comfortable with Python syntax and write your first code
-2. Data Structures: Learn how you could store data in Python and how to manipulate them
-3. Data Analysis Tools: Learn how to utilize various different Python libraries to analyze and visualize your data 
+1. Python Syntax: Get comfortable with Python syntax and write your first code
+2. Python Data Structures: Learn how you could store data in Python and how to manipulate them
+3. Python Data Analysis Visualization: Learn how to utilize various different Python libraries to analyze and visualize your data 
 
 ## Who Is This For?
 1. Complete Beginners: If you have zero programming experience but want to learn Python, this is the perfect place to start
