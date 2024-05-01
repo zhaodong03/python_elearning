@@ -1,5 +1,4 @@
 import streamlit as st
-from streamlit_extras.switch_page_button import switch_page
 
 if 'stage' not in st.session_state:
     st.session_state.stage = 0

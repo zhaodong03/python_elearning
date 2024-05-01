@@ -76,6 +76,7 @@ https://www.digitalocean.com/community/tutorials/install-python-windows-10
 ''')
     st.subheader("Congraduation! You Have Installed Python on Your Machine")
     if st.button('**Continue to the First Module**', 2, type='primary'):
+        st.session_state.stage = 0
         switch_page('Module 1: Python Syntax')
 
 

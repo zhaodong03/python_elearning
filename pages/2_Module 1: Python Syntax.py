@@ -216,4 +216,5 @@ if st.session_state.stage == 2:
         st.markdown("**Your Grade is:** 100/100")
     st.button('Back to Module', on_click=set_state, args=[1])
     if st.button('Continue to Next Module', type='primary'):
+        st.session_state.stage = 0
         switch_page('Module 2: Python Data Structure')
