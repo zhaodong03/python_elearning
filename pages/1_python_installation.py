@@ -1,4 +1,5 @@
 import streamlit as st
+from streamlit_extras.switch_page_button import switch_page
 
 tab1, tab2 = st.tabs(["Mac", "Windows"])
 
@@ -38,7 +39,9 @@ Click the small triangle run button on the top right of the screen to run the co
 You will see the Hello World be printed in the Output'''
 )
     st.image('assets/installation/02.png')
-
+    st.subheader("Congraduation! You Have Installed Python on Your Machine")
+    if st.button('**Continue to the First Module**', 1, type='primary'):
+        switch_page('Module 1: Python Syntax')
 with tab2:
     st.header("Windows Python Installation")
     st.markdown('''
@@ -71,4 +74,8 @@ You will see the Hello World be printed in the Output'''
 ## Reference 
 https://www.digitalocean.com/community/tutorials/install-python-windows-10
 ''')
+    st.subheader("Congraduation! You Have Installed Python on Your Machine")
+    if st.button('**Continue to the First Module**', 2, type='primary'):
+        switch_page('Module 1: Python Syntax')
+
 

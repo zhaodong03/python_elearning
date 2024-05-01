@@ -1,9 +1,24 @@
 import streamlit as st
+from streamlit_extras.switch_page_button import switch_page
 
-tab1, tab2, tab3 = st.tabs(["Objectives", "Course", "Assignment"])
+if 'stage' not in st.session_state:
+    st.session_state.stage = 0
 
-with tab1:
+def set_state(i):
+    st.session_state.stage = i
+
+if st.session_state.stage == 0:
     st.header("Module 2: Python Data Structure")
+    col1, col2, col3, col4 = st.columns(4)
+    with col1:
+        st.markdown("Objective")
+    with col2:
+        st.markdown("Section 01")
+    with col3:
+        st.markdown("Section 02")
+    with col4:
+        st.markdown("Assignment")
+    st.progress(25)
     st.markdown('''
     ## Course Objective:
     Diving deeper into Python, "Data Structures" is your next stop on this programming adventure. Python's data structures are like the compartments of a toolbox, each holding its own set of tools in an organized manner. With them, you can store, structure, and manipulate data efficiently—vital skills for any aspiring programmer.
@@ -14,8 +29,21 @@ with tab1:
     
     Section 02: Dictionaries and Key-Value Pairing
     ''')
-with tab2:
+
+    st.button('Begin Module',type='primary', on_click=set_state, args=[1])
+
+if st.session_state.stage == 1:
     st.header("Module 2: Python Data Structure")
+    col1, col2, col3, col4 = st.columns(4)
+    with col1:
+        st.markdown("Objective")
+    with col2:
+        st.markdown("Section 01")
+    with col3:
+        st.markdown("Section 02")
+    with col4:
+        st.markdown("Assignment")
+    st.progress(50)
     st.markdown('''
     ## Section 01: Lists and List Operations
     In this section, "Lists and List Operations," you'll discover the versatility of Python lists. Lists in Python are ordered collections that are changeable and allow duplicate members. You'll learn how to create a list, access list items, change their values, loop through a list, and understand list comprehensions.
@@ -47,6 +75,16 @@ with tab2:
     )
     st.subheader("You must correctly answer the above quizz(es) to unlock the rest masterials")
     if q1 == 'my_list = [1, 2, 3]':
+        col1, col2, col3, col4 = st.columns(4)
+        with col1:
+            st.markdown("Objective")
+        with col2:
+            st.markdown("Section 01")
+        with col3:
+            st.markdown("Section 02")
+        with col4:
+            st.markdown("Assignment")
+        st.progress(75)
         st.markdown('''
     ## Section 02: Dictionaries and Key-Value Pairing
     In this section, "Dictionaries and Key-Value Pairing," you'll explore the Python dictionary, a collection of key-value pairs that allows you to store and retrieve data efficiently. Unlike lists, dictionaries are unordered and cannot be indexed by a number. Instead, they use unique keys to access values. This makes dictionaries ideal for representing real-world data in a structured way.
@@ -71,9 +109,24 @@ with tab2:
             ''')
         st.image('assets/m2/06.jpg')
         
-    rate = st.slider('Please Rate this module', 0, 3, 5)
+        rate = st.slider('Please Rate this module', 0, 3, 5)
 
-with tab3:
+        st.button('Continue to Assignment', type='primary', on_click=set_state, args=[2])
+
+    st.button('Back to Objective', on_click=set_state, args=[0])
+
+
+if st.session_state.stage == 2:
+    col1, col2, col3, col4 = st.columns(4)
+    with col1:
+        st.markdown("Objective")
+    with col2:
+        st.markdown("Section 01")
+    with col3:
+        st.markdown("Section 02")
+    with col4:
+        st.markdown("Assignment")
+    st.progress(100)
     st.header("Assignment")
     st.markdown('''
     ## Assignment Objective: 
@@ -104,3 +157,6 @@ with tab3:
     
     if file:
         st.markdown("**Your Grade is:** 100/100")
+    st.button('Back to Module', on_click=set_state, args=[1])
+    if st.button('Continue to Next Module', type='primary'):
+        switch_page('Module 3: Python Data Visualization')

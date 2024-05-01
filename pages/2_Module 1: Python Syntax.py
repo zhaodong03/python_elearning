@@ -1,9 +1,24 @@
 import streamlit as st
+from streamlit_extras.switch_page_button import switch_page
 
-tab1, tab2, tab3 = st.tabs(["Objectives", "Course", "Assignment"])
+if 'stage' not in st.session_state:
+    st.session_state.stage = 0
 
-with tab1:
+def set_state(i):
+    st.session_state.stage = i
+
+if st.session_state.stage == 0:
     st.header("Module 1: Python Syntax")
+    col1, col2, col3, col4 = st.columns(4)
+    with col1:
+        st.markdown("Objective")
+    with col2:
+        st.markdown("Section 01")
+    with col3:
+        st.markdown("Section 02")
+    with col4:
+        st.markdown("Assignment")
+    st.progress(25)
     st.markdown('''
     ## Course Objectives
                 
@@ -20,8 +35,20 @@ with tab1:
 
     Section 02: Variables and Data Types             
     ''')
-with tab2:
+    st.button('Begin Module', type='primary', on_click=set_state, args=[1])
+
+if st.session_state.stage == 1:
     st.header("Module 1: Python Syntax")
+    col1, col2, col3, col4 = st.columns(4)
+    with col1:
+        st.markdown("Objective")
+    with col2:
+        st.markdown("Section 01")
+    with col3:
+        st.markdown("Section 02")
+    with col4:
+        st.markdown("Assignment")
+    st.progress(50)
     st.markdown('''
     ## Section 01: Basic Syntax and Comments
     In this lesson, "Basic Syntax and Comments," you'll take your first steps into writing clean and readable code. Python is known for its straightforward syntax, often compared to the English language, which makes it an excellent language for beginners.
@@ -91,6 +118,16 @@ with tab2:
 
     st.subheader("You must correctly answer the above three quizzes to unlock the rest masterials")
     if q1 == "\# This is a comment" and q2 == "Indentation in Python is critical and is used to define the scope of loops, functions, and classes." and q3 == 'Enclose the comment in triple double-quotes, like """This is a multi-line comment""".':
+        col1, col2, col3, col4 = st.columns(4)
+        with col1:
+            st.markdown("Objective")
+        with col2:
+            st.markdown("Section 01")
+        with col3:
+            st.markdown("Section 02")
+        with col4:
+            st.markdown("Assignment")
+        st.progress(75)
         st.markdown('''
     ## Section 02: Variables and Data Types
     In this section, we will dive into how you can declare variables and the simplicity behind Python’s dynamic typing. We’ll explore the core data types that are foundational to programming in Python: integers for whole numbers, floating-point numbers for decimals, strings for text, and booleans for truth values.
@@ -143,10 +180,25 @@ with tab2:
     - Example of dynamic typing:
 ''')
         st.image('assets/m1/07.jpg')
-    rate = st.slider('Please Rate this module', 0, 3, 5)
+        rate = st.slider('Please Rate this module', 0, 3, 5)
 
-with tab3:
+        st.button('Continue to Assignment', type='primary', on_click=set_state, args=[2])
+
+    st.button('Back to Objective', on_click=set_state, args=[0])
+
+
+if st.session_state.stage == 2:
     st.header("Module 1: Python Syntax")
+    col1, col2, col3, col4 = st.columns(4)
+    with col1:
+        st.markdown("Objective")
+    with col2:
+        st.markdown("Section 01")
+    with col3:
+        st.markdown("Section 02")
+    with col4:
+        st.markdown("Assignment")
+    st.progress(100)
     st.markdown('''         
     ## Assignment Objective: 
     Create a Python script that demonstrates the use of basic syntax, comments, variables, and data types. Your script will act as a journal entry for your first week of learning Python, summarizing what you have learned and storing various pieces of information as Python variables.
@@ -173,3 +225,6 @@ with tab3:
     
     if file:
         st.markdown("**Your Grade is:** 100/100")
+    st.button('Back to Module', on_click=set_state, args=[1])
+    if st.button('Continue to Next Module', type='primary'):
+        switch_page('Module 2: Python Data Structure')

@@ -1,9 +1,22 @@
 import streamlit as st
+from streamlit_extras.switch_page_button import switch_page
 
-tab1, tab2 = st.tabs(["Objectives", "Course"])
+if 'stage' not in st.session_state:
+    st.session_state.stage = 0
 
-with tab1:
+def set_state(i):
+    st.session_state.stage = i
+
+if st.session_state.stage == 0:
     st.header("Module 3: Python Data Visualization")
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.markdown("Objective")
+    with col2:
+        st.markdown("Section 01")
+    with col3:
+        st.markdown("Section 02")
+    st.progress(33)
     st.markdown('''      
     ## Course Objective
     In this module, we will learn about data analysis and visualization using the libraries of pandas and seaborn. Pandas allows reading and processing CSVs, a spreadsheet file with columns separated by commas and rows by line breaks. Seaborn is a Python library that allows you to create plots effortlessly. An alternative is matplotlib, but matplotlib often requires more code to create simple plots.
@@ -11,11 +24,20 @@ with tab1:
     ## Course Sections
     Section 01: Pandas Library
 
-    Section 02: Plotting
-''')
+    Section 02: Plotting''')
 
-with tab2:
+    st.button('Begin Module', type='primary', on_click=set_state, args=[1])
+
+if st.session_state.stage == 1:
     st.header("Module 3: Python Data Visualization")
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.markdown("Objective")
+    with col2:
+        st.markdown("Section 01")
+    with col3:
+        st.markdown("Section 02")
+    st.progress(66)
     st.markdown('''
 ## Section 01: Pandas Library
 To get started, download the [file](https://web.stanford.edu/class/archive/cs/cs109/cs109.1166/stuff/titanic.csv) containing a dataset focused around survivors of the Titanic. I suggest using a jupyter notebook to write and run the code along with this module. Today, we will analyze the survival rate within the Titanic. First, some basic information about Pandas functions.
@@ -56,6 +78,14 @@ You can also display the number of rows and columns in the data by using the sha
     )
     st.subheader("You must correctly answer the above quizz(es) to unlock the rest masterials")
     if q1 == 'df.head()':
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.markdown("Objective")
+        with col2:
+            st.markdown("Section 01")
+        with col3:
+            st.markdown("Section 02")
+        st.progress(100)
         st.markdown('''
 ## Section 02: Plotting
 
@@ -107,4 +137,10 @@ It appears that we lived in less equal times! Those who paid higher fares tended
 Let's take a look at how the age is distributed among the passengers. Just for fun. Recall that a boxplot shows the minimum, first quartile, median, third quartile, and maximum of a dataset.
 ''')                  
         st.image('assets/m3/19.jpg')
-    rate = st.slider('Please Rate this module', 0, 3, 5)
+
+        st.subheader('Congraduation! You have successfully Complete the Entire Course')
+        rate = st.slider('Please Rate this module', 0, 3, 5)
+
+    
+    st.button('Back to Objective', on_click=set_state, args=[0])
+

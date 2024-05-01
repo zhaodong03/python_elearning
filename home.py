@@ -1,5 +1,7 @@
 import streamlit as st
 from streamlit.logger import get_logger
+from streamlit_extras.switch_page_button import switch_page
+
 
 LOGGER = get_logger(__name__)
 
@@ -36,12 +38,10 @@ Firstly, please follow the Python Installation instructions to ensure all requir
 
 For each module, there are three sections “Objectives”, “Course”, and “Assignment”. You can find the corresponding tab on the top of the screen, and you can click each tab to jump between them. Under the “Objectives” section, you will find what you will learn after accomplishing this module. The “Course” section contains the main course material for this section. Note that there may be pop quizzes in the material, you have to correctly answer the quiz to proceed. Finally, the “Assignment” section gives you the opportunity to test yourself through hands-on coding experience. Upload your code and our Autograder will grade your assignment and provide you feedback.
 
-**Start Your Journey NOW.**
-
-
     """
     )
-
+    if st.button("**Start Your Journey NOW.**", type="primary"):
+        switch_page('Python Installation')
 
 if __name__ == "__main__":
     run()
