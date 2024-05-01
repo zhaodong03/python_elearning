@@ -105,19 +105,8 @@ if st.session_state.stage == 1:
         ["// This is a comment", "/* This is a comment */", "\# This is a comment", "<!-- This is a comment -->"],
         index=None,
     )
-    q2 = st.radio(
-        "Which of the following statements about Python indentation is true?",
-        ["Indentation is optional in Python and does not affect the code execution.", "In Python, indentation is used for aesthetics only and has no practical use.","Indentation in Python is critical and is used to define the scope of loops, functions, and classes.","Python code can be indented using any number of spaces or tabs interchangeably without issue."],
-        index=None,
-    )
-    q3 = st.radio(
-        "How do you write a multi-line comment in Python?",
-        ["Surround the comment with /* and */.", "Start each line of the comment with #.", 'Enclose the comment in triple double-quotes, like """This is a multi-line comment""".', "Python does not support multi-line comments."],
-        index=None,
-    )
-
     st.subheader("You must correctly answer the above three quizzes to unlock the rest masterials")
-    if q1 == "\# This is a comment" and q2 == "Indentation in Python is critical and is used to define the scope of loops, functions, and classes." and q3 == 'Enclose the comment in triple double-quotes, like """This is a multi-line comment""".':
+    if q1 == "\# This is a comment":
         col1, col2, col3, col4 = st.columns(4)
         with col1:
             st.markdown("Objective")
